@@ -4,7 +4,6 @@ class TestData:
     ADMIN_USERNAME = "user"
     ADMIN_PASSWORD = "bitnami"
     
-    # Test product data
     TEST_PRODUCT = {
         'name': 'Test Product ',
         'meta_tag': 'test meta tag',
@@ -13,7 +12,6 @@ class TestData:
         'quantity': '10'
     }
     
-    # Test user data
     @staticmethod
     def get_test_user():
         import random

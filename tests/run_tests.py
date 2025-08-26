@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Script для запуска тестов с автоматической установкой зависимостей
 """
@@ -117,19 +116,16 @@ if __name__ == "__main__":
     print("Запуск тестовой системы")
     print("=" * 50)
     
-    # Проверяем зависимости
     if not check_dependencies():
         print("Зависимости не установлены. Устанавливаем...")
         if not install_dependencies():
             print("Не удалось установить зависимости")
             sys.exit(1)
     
-    # Создаем пример теста если нет тестов
     created_test = create_sample_test()
     if created_test:
         print("Создан пример теста для проверки")
     
-    # Запускаем тесты
     success = run_tests()
     
     if success:
